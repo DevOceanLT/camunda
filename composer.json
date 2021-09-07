@@ -1,5 +1,5 @@
 {
-    "name": "DevOceanLT/camunda",
+    "name": "devoceanlt/camunda",
     "description": "High level model, something like Eloquent, to interact with Camunda resources via REST API",
     "keywords": ["laravel", "DevOceanLT", "camunda"],
     "homepage": "https://github.com/DevOceanLT/camunda",
