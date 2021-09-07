@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Camunda\Exceptions;
+namespace DevOceanLT\Camunda\Exceptions;
 
 class ParseException extends CamundaException
 {

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Laravolt\Camunda\Http;
+namespace DevOceanLT\Camunda\Http;
 
-use Laravolt\Camunda\Dto\Deployment;
-use Laravolt\Camunda\Exceptions\ObjectNotFoundException;
-use Laravolt\Camunda\Exceptions\ParseException;
+use DevOceanLT\Camunda\Dto\Deployment;
+use DevOceanLT\Camunda\Exceptions\ParseException;
+use DevOceanLT\Camunda\Exceptions\ObjectNotFoundException;
 
 class DeploymentClient extends CamundaClient
 {

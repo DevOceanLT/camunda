@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Laravolt\Camunda\Dto;
+namespace DevOceanLT\Camunda\Dto;
 
-use Laravolt\Camunda\Dto\Casters\VariablesCaster;
-use Spatie\DataTransferObject\Attributes\CastWith;
 use Spatie\DataTransferObject\Attributes\Strict;
 use Spatie\DataTransferObject\DataTransferObject;
+use Spatie\DataTransferObject\Attributes\CastWith;
+use DevOceanLT\Camunda\Dto\Casters\VariablesCaster;
 
 #[Strict]
 class ProcessInstance extends DataTransferObject
@@ -28,7 +28,7 @@ class ProcessInstance extends DataTransferObject
 
     public bool $suspended;
 
-    /** @var \Laravolt\Camunda\Dto\Variable[]  */
+    /** @var \DevOceanLT\Camunda\Dto\Variable[]  */
     #[CastWith(VariablesCaster::class, Variable::class)]
     public array|null $variables;
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Laravolt\Camunda\Tests;
+namespace DevOceanLT\Camunda\Tests;
 
-use Laravolt\Camunda\Dto\Deployment;
-use Laravolt\Camunda\Http\DeploymentClient;
+use DevOceanLT\Camunda\Dto\Deployment;
+use DevOceanLT\Camunda\Http\DeploymentClient;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {

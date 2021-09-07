@@ -1,12 +1,12 @@
 <?php
 
-namespace Laravolt\Camunda\Dto;
+namespace DevOceanLT\Camunda\Dto;
 
 use Illuminate\Support\Carbon;
-use Laravolt\Camunda\Dto\Casters\CarbonCaster;
-use Spatie\DataTransferObject\Attributes\CastWith;
+use DevOceanLT\Camunda\Dto\Casters\CarbonCaster;
 use Spatie\DataTransferObject\Attributes\Strict;
 use Spatie\DataTransferObject\DataTransferObject;
+use Spatie\DataTransferObject\Attributes\CastWith;
 
 #[Strict]
 class TaskHistory extends DataTransferObject

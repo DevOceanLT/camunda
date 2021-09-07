@@ -1,11 +1,11 @@
 <?php
 
-namespace Laravolt\Camunda\Http;
+namespace DevOceanLT\Camunda\Http;
 
 use Illuminate\Support\Arr;
-use Laravolt\Camunda\Dto\TaskHistory;
-use Laravolt\Camunda\Exceptions\CamundaException;
-use Laravolt\Camunda\Exceptions\ObjectNotFoundException;
+use DevOceanLT\Camunda\Dto\TaskHistory;
+use DevOceanLT\Camunda\Exceptions\CamundaException;
+use DevOceanLT\Camunda\Exceptions\ObjectNotFoundException;
 
 class TaskHistoryClient extends CamundaClient
 {

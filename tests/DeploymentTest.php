@@ -1,10 +1,10 @@
 <?php
 
-namespace Laravolt\Camunda\Tests;
+namespace DevOceanLT\Camunda\Tests;
 
-use Laravolt\Camunda\Exceptions\ObjectNotFoundException;
-use Laravolt\Camunda\Exceptions\ParseException;
-use Laravolt\Camunda\Http\DeploymentClient;
+use DevOceanLT\Camunda\Http\DeploymentClient;
+use DevOceanLT\Camunda\Exceptions\ParseException;
+use DevOceanLT\Camunda\Exceptions\ObjectNotFoundException;
 
 class DeploymentTest extends TestCase
 {
@@ -87,7 +87,7 @@ class DeploymentTest extends TestCase
     {
         $this->expectException(ObjectNotFoundException::class);
 
-        $deployment = new \Laravolt\Camunda\Dto\Deployment(
+        $deployment = new \DevOceanLT\Camunda\Dto\Deployment(
             id: 'invalid-id',
             name: 'test',
             deploymentTime: now(),

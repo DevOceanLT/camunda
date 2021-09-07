@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Laravolt\Camunda\Http;
+namespace DevOceanLT\Camunda\Http;
 
-use Laravolt\Camunda\Dto\ProcessDefinition;
-use Laravolt\Camunda\Dto\ProcessInstance;
-use Laravolt\Camunda\Exceptions\InvalidArgumentException;
-use Laravolt\Camunda\Exceptions\ObjectNotFoundException;
+use DevOceanLT\Camunda\Dto\ProcessInstance;
+use DevOceanLT\Camunda\Dto\ProcessDefinition;
+use DevOceanLT\Camunda\Exceptions\ObjectNotFoundException;
+use DevOceanLT\Camunda\Exceptions\InvalidArgumentException;
 
 class ProcessDefinitionClient extends CamundaClient
 {

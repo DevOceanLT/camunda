@@ -1,14 +1,14 @@
 <?php
 
-namespace Laravolt\Camunda\Tests;
+namespace DevOceanLT\Camunda\Tests;
 
-use Laravolt\Camunda\Dto\TaskHistory;
-use Laravolt\Camunda\Dto\Variable;
-use Laravolt\Camunda\Exceptions\CamundaException;
-use Laravolt\Camunda\Exceptions\ObjectNotFoundException;
-use Laravolt\Camunda\Http\ProcessDefinitionClient;
-use Laravolt\Camunda\Http\TaskClient;
-use Laravolt\Camunda\Http\TaskHistoryClient;
+use DevOceanLT\Camunda\Dto\Variable;
+use DevOceanLT\Camunda\Dto\TaskHistory;
+use DevOceanLT\Camunda\Http\TaskClient;
+use DevOceanLT\Camunda\Http\TaskHistoryClient;
+use DevOceanLT\Camunda\Exceptions\CamundaException;
+use DevOceanLT\Camunda\Http\ProcessDefinitionClient;
+use DevOceanLT\Camunda\Exceptions\ObjectNotFoundException;
 
 class TaskTest extends TestCase
 {

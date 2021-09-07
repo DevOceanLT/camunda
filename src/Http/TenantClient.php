@@ -1,10 +1,10 @@
 <?php
 
-namespace Laravolt\Camunda\Http;
+namespace DevOceanLT\Camunda\Http;
 
-use Laravolt\Camunda\Dto\Tenant;
-use Laravolt\Camunda\Exceptions\CamundaException;
-use Laravolt\Camunda\Exceptions\ObjectNotFoundException;
+use DevOceanLT\Camunda\Dto\Tenant;
+use DevOceanLT\Camunda\Exceptions\CamundaException;
+use DevOceanLT\Camunda\Exceptions\ObjectNotFoundException;
 
 class TenantClient extends CamundaClient
 {

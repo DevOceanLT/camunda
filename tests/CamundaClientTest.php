@@ -1,8 +1,8 @@
 <?php
 
-namespace Laravolt\Camunda\Tests;
+namespace DevOceanLT\Camunda\Tests;
 
-use Laravolt\Camunda\Http\CamundaClient;
+use DevOceanLT\Camunda\Http\CamundaClient;
 
 class CamundaClientTest extends TestCase
 {

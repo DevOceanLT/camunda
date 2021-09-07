@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Camunda\Dto\Casters;
+namespace DevOceanLT\Camunda\Dto\Casters;
 
 use Illuminate\Support\Carbon;
 use Spatie\DataTransferObject\Caster;

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Laravolt\Camunda\Http;
+namespace DevOceanLT\Camunda\Http;
 
-use Laravolt\Camunda\Dto\ProcessInstance;
-use Laravolt\Camunda\Dto\ProcessInstanceHistory;
-use Laravolt\Camunda\Dto\Variable;
-use Laravolt\Camunda\Exceptions\ObjectNotFoundException;
+use DevOceanLT\Camunda\Dto\Variable;
+use DevOceanLT\Camunda\Dto\ProcessInstance;
 use Spatie\DataTransferObject\DataTransferObject;
+use DevOceanLT\Camunda\Dto\ProcessInstanceHistory;
+use DevOceanLT\Camunda\Exceptions\ObjectNotFoundException;
 
 class ProcessInstanceHistoryClient extends CamundaClient
 {
@@ -31,7 +31,7 @@ class ProcessInstanceHistoryClient extends CamundaClient
     /**
      * @param  string  $id
      *
-     * @return \Laravolt\Camunda\Dto\ProcessInstanceHistory
+     * @return \DevOceanLT\Camunda\Dto\ProcessInstanceHistory
      * @throws \Spatie\DataTransferObject\Exceptions\UnknownProperties
      */
     public static function find(string $id): ProcessInstanceHistory

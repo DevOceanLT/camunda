@@ -1,8 +1,8 @@
 <?php
 
-namespace Laravolt\Camunda\Tests;
+namespace DevOceanLT\Camunda\Tests;
 
-use Laravolt\Camunda\BpmnReader;
+use DevOceanLT\Camunda\BpmnReader;
 
 class BpmnTest extends TestCase
 {

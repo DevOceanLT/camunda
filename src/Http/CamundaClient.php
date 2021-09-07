@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Laravolt\Camunda\Http;
+namespace DevOceanLT\Camunda\Http;
 
-use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Http;
-use Laravolt\Camunda\Exceptions\InvalidArgumentException;
+use Illuminate\Http\Client\PendingRequest;
+use DevOceanLT\Camunda\Exceptions\InvalidArgumentException;
 
 class CamundaClient
 {

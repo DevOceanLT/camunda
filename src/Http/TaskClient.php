@@ -1,12 +1,12 @@
 <?php
 
-namespace Laravolt\Camunda\Http;
+namespace DevOceanLT\Camunda\Http;
 
-use Laravolt\Camunda\Dto\Casters\VariablesCaster;
-use Laravolt\Camunda\Dto\Task;
-use Laravolt\Camunda\Dto\Variable;
-use Laravolt\Camunda\Exceptions\CamundaException;
-use Laravolt\Camunda\Exceptions\ObjectNotFoundException;
+use DevOceanLT\Camunda\Dto\Task;
+use DevOceanLT\Camunda\Dto\Variable;
+use DevOceanLT\Camunda\Dto\Casters\VariablesCaster;
+use DevOceanLT\Camunda\Exceptions\CamundaException;
+use DevOceanLT\Camunda\Exceptions\ObjectNotFoundException;
 
 class TaskClient extends CamundaClient
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravolt\Camunda;
+namespace DevOceanLT\Camunda;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {

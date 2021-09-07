@@ -1,11 +1,11 @@
 <?php
 
-namespace Laravolt\Camunda\Tests;
+namespace DevOceanLT\Camunda\Tests;
 
-use Laravolt\Camunda\Dto\Variable;
-use Laravolt\Camunda\Exceptions\ObjectNotFoundException;
-use Laravolt\Camunda\Http\ProcessDefinitionClient;
-use Laravolt\Camunda\Http\ProcessInstanceClient;
+use DevOceanLT\Camunda\Dto\Variable;
+use DevOceanLT\Camunda\Http\ProcessInstanceClient;
+use DevOceanLT\Camunda\Http\ProcessDefinitionClient;
+use DevOceanLT\Camunda\Exceptions\ObjectNotFoundException;
 
 class ProcessInstanceTest extends TestCase
 {

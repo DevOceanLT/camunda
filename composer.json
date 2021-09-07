@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Laravolt\\Camunda\\": "src"
+            "DevOceanLT\\Camunda\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Laravolt\\Camunda\\Tests\\": "tests"
+            "DevOceanLT\\Camunda\\Tests\\": "tests"
         }
     },
     "extra": {
@@ -34,7 +34,7 @@
         },
         "laravel": {
             "providers": [
-                "Laravolt\\Camunda\\ServiceProvider"
+                "DevOceanLT\\Camunda\\ServiceProvider"
             ]
         }
     },
