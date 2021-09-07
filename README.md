@@ -1,9 +1,9 @@
 
-# laravolt/camunda
+# DevOceanLT/camunda
 Convenience Laravel HTTP client wrapper to interact with Camunda REST API.
 
 ## Installation
-`composer require laravolt/camunda`
+`composer require DevOceanLT/camunda`
 
 ## Configuration
 
@@ -33,7 +33,7 @@ Add following entries to `config/services.php`:
 
 ### Process Definition
 ```php
-use Laravolt\Camunda\Http\ProcessDefinitionClient;
+use DevOceanLT\Camunda\Http\ProcessDefinitionClient;
 
 $variables = ['title' => ['value' => 'Sample Title', 'type' => 'string']];
 
@@ -62,7 +62,7 @@ Camunda API reference: https://docs.camunda.org/manual/latest/reference/rest/pro
 
 ### Process Instance
 ```php
-use Laravolt\Camunda\Http\ProcessInstanceClient;
+use DevOceanLT\Camunda\Http\ProcessInstanceClient;
 
 // Find by ID
 $processInstance = ProcessInstanceClient::find(id: 'some-id');
@@ -84,7 +84,7 @@ Camunda API reference: https://docs.camunda.org/manual/latest/reference/rest/pro
 
 ### Task
 ```php
-use Laravolt\Camunda\Http\TaskClient;
+use DevOceanLT\Camunda\Http\TaskClient;
 
 $task = TaskClient::find(id: 'task-id');
 $tasks = TaskClient::getByProcessInstanceId(id: 'process-instance-id');
@@ -99,7 +99,7 @@ Camunda API reference: https://docs.camunda.org/manual/latest/reference/rest/tas
 ### Task History (Completed Task)
 
 ```php
-use Laravolt\Camunda\Http\TaskHistoryClient;
+use DevOceanLT\Camunda\Http\TaskHistoryClient;
 
 $completedTask = TaskHistoryClient::find(id: 'task-id');
 $completedTasks = TaskHistoryClient::getByProcessInstanceId(id: 'process-instance-id');
@@ -112,7 +112,7 @@ Camunda API reference: https://docs.camunda.org/manual/latest/reference/rest/his
 ### Deployment
 
 ```php
-use Laravolt\Camunda\Http\DeploymentClient;
+use DevOceanLT\Camunda\Http\DeploymentClient;
 
 // Deploy bpmn file(s)
 DeploymentClient::create('test-deploy', '/path/to/file.bpmn');
@@ -137,9 +137,9 @@ DeploymentClient::delete(id: 'test-deploy', cascade: $cascade);
 
 ### Raw Endpoint
 
-You can utilize `Laravolt\Camunda\CamundaClient` to call any Camunda REST endpoint.
+You can utilize `DevOceanLT\Camunda\CamundaClient` to call any Camunda REST endpoint.
 ```php
-use Laravolt\Camunda\CamundaClient;
+use DevOceanLT\Camunda\CamundaClient;
 
 $response = CamundaClient::make()->get('version');
 echo $response->status(); // 200
