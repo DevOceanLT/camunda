@@ -1,14 +1,14 @@
 {
-    "name": "laravolt/camunda",
+    "name": "DevOceanLT/camunda",
     "description": "High level model, something like Eloquent, to interact with Camunda resources via REST API",
-    "keywords": ["laravel", "laravolt", "camunda"],
-    "homepage": "https://github.com/laravolt/camunda",
+    "keywords": ["laravel", "DevOceanLT", "camunda"],
+    "homepage": "https://github.com/DevOceanLT/camunda",
     "license": "MIT",
     "authors": [
         {
-            "name": "Bayu Hendra Winata",
-            "email": "uyab.exe@gmail.com",
-            "homepage": "https://laravolt.dev",
+            "name": "Marius Geležinis",
+            "email": "marius.gelez@gmail.com",
+            "homepage": "https://www.devocean.lt",
             "role": "Developer"
         }
     ],
