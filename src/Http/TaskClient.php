@@ -22,6 +22,23 @@ class TaskClient extends CamundaClient
     }
 
     /**
+     * @return Task[]
+     */
+    public static function all(): array
+    {
+        $response = self::make()->post("task");
+
+        $data = [];
+        if ($response->successful()) {
+            foreach ($response->json() as $task) {
+                $data[] = new Task($task);
+            }
+        }
+
+        return $data;
+    }
+
+    /**
      * @param  string  $processInstanceId
      *
      * @return Task[]
