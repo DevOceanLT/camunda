@@ -1,9 +1,9 @@
 
-# DevOceanLT/camunda
+# devoceanlt/camunda
 Convenience Laravel HTTP client wrapper to interact with Camunda REST API.
 
 ## Installation
-`composer require DevOceanLT/camunda`
+`composer require devoceanlt/camunda`
 
 ## Configuration
 
