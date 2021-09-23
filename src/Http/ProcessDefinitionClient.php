@@ -11,25 +11,23 @@ use DevOceanLT\Camunda\Exceptions\InvalidArgumentException;
 
 class ProcessDefinitionClient extends CamundaClient
 {
-    public static function start(...$args): ProcessInstance
+    public static function start($params): ProcessInstance
     {
-        $variables = $args['variables'] ?? [];
-        $businessKey = $args['businessKey'] ?? null;
-
-        // At least one value must be set...
-        if (empty($variables)) {
-            throw new InvalidArgumentException('Cannot start process instance with empty variables');
-        }
+        $variables = $params['variables'] ?? null;
+        $businessKey = $params['businessKey'] ?? null;
 
         $payload = [
-            'variables' => $variables,
-            'withVariablesInReturn' => true,
+            'withVariablesInReturn' => true
         ];
+        if ($variables) {
+            $payload['variables'] = $variables;
+        }
         if ($businessKey) {
             $payload['businessKey'] = $businessKey;
         }
 
-        $path = self::makeIdentifierPath('process-definition/{identifier}/start', $args);
+        $key = $params['key'];
+        $path = "process-definition/key/{$key}/start";
         $response = self::make()->post($path, $payload);
 
         if ($response->successful()) {

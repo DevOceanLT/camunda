@@ -26,7 +26,7 @@ class TaskClient extends CamundaClient
      */
     public static function all(): array
     {
-        $response = self::make()->post("task");
+        $response = self::make()->get("task");
 
         $data = [];
         if ($response->successful()) {
@@ -58,7 +58,46 @@ class TaskClient extends CamundaClient
         return $data;
     }
 
-    public static function submit(string $id, array $variables): bool
+    public static function claim(string $id, string $userId): bool
+    {
+        $response = self::make()->post(
+            "task/$id/claim",
+            ['userId' => $userId]
+        );
+
+        if ($response->status() === 204) {
+            return true;
+        }
+
+        throw new CamundaException($response->body(), $response->status());
+    }
+
+    public static function unclaim(string $id): bool
+    {
+        $response = self::make()->post("task/$id/claim");
+
+        if ($response->status() === 204) {
+            return true;
+        }
+
+        throw new CamundaException($response->body(), $response->status());
+    }
+
+    public static function complete(string $id, array $variables = null): bool
+    {
+        $response = self::make()->post(
+            "task/$id/complete",
+            compact('variables')
+        );
+
+        if ($response->status() === 204) {
+            return true;
+        }
+
+        throw new CamundaException($response->body(), $response->status());
+    }
+
+    public static function submitForm(string $id, array $variables): bool
     {
         $response = self::make()->post(
             "task/$id/submit-form",
@@ -72,7 +111,7 @@ class TaskClient extends CamundaClient
         throw new CamundaException($response->body(), $response->status());
     }
 
-    public static function submitAndReturnVariables(string $id, array $variables): array
+    public static function submitFormAndReturnVariables(string $id, array $variables): array
     {
         $response = self::make()->post(
             "task/$id/submit-form",

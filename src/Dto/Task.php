@@ -20,7 +20,8 @@ class Task extends DataTransferObject
     #[CastWith(CarbonCaster::class)]
     public Carbon $created;
 
-    public string|null $due;
+    #[CastWith(CarbonCaster::class)]
+    public Carbon|null $due;
 
     public string|null $followUp;
 
