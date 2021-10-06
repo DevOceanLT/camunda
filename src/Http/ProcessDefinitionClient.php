@@ -11,7 +11,7 @@ use DevOceanLT\Camunda\Exceptions\InvalidArgumentException;
 
 class ProcessDefinitionClient extends CamundaClient
 {
-    public static function start($params): ProcessInstance
+    public static function start(array $params): ProcessInstance
     {
         $variables = $params['variables'] ?? null;
         $businessKey = $params['businessKey'] ?? null;

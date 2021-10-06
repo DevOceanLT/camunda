@@ -3,6 +3,7 @@
 namespace DevOceanLT\Camunda\Http;
 
 use DevOceanLT\Camunda\Dto\ExternalTask;
+use DevOceanLT\Camunda\Exceptions\CamundaException;
 use DevOceanLT\Camunda\Exceptions\ObjectNotFoundException;
 use DevOceanLT\Camunda\Exceptions\InvalidArgumentException;
 
