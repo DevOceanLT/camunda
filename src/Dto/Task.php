@@ -23,7 +23,8 @@ class Task extends DataTransferObject
     #[CastWith(CarbonCaster::class)]
     public Carbon|null $due;
 
-    public string|null $followUp;
+    #[CastWith(CarbonCaster::class)]
+    public Carbon|null $followUp;
 
     public string|null $delegationState;
 
@@ -52,6 +53,8 @@ class Task extends DataTransferObject
     public bool $suspended;
 
     public string|null $formKey;
+
+    public array|null $camundaFormRef;
 
     public string|null $tenantId;
 }
