@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace DevOceanLT\Camunda\Http;
 
 use DevOceanLT\Camunda\Dto\Variable;
-use DevOceanLT\Camunda\Dto\ProcessInstance;
-use Spatie\DataTransferObject\DataTransferObject;
 use DevOceanLT\Camunda\Dto\ProcessInstanceHistory;
 use DevOceanLT\Camunda\Exceptions\ObjectNotFoundException;
 
