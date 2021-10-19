@@ -9,7 +9,7 @@ class TaskVariableClient extends CamundaClient
     /**
      * @param  array  $params
      *
-     * @return TaskVariable[]
+     * @return Variable[]
      * @throws \Spatie\DataTransferObject\Exceptions\UnknownProperties
      */
     public static function get(string $taskId): array
