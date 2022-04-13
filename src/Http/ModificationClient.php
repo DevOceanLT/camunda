@@ -12,7 +12,7 @@ class ModificationClient extends CamundaClient
     {
         $response = self::make()->post(
             "modification/execute",
-            compact('parameters')
+            $parameters
         );
 
         if ($response->status() === 204) {
@@ -26,7 +26,7 @@ class ModificationClient extends CamundaClient
     {
         $response = self::make()->post(
             "modification/executeAsync",
-            compact('parameters')
+            $parameters
         );
 
         if ($response->status() === 204) {
