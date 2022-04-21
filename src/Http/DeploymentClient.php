@@ -12,26 +12,24 @@ class DeploymentClient extends CamundaClient
 {
     public static function create(string $name, string|array $bpmnFiles): Deployment
     {
-        $multipart = [
-            ['name' => 'deployment-name', 'contents' => $name],
-            ['name' => 'deployment-source', 'contents' => sprintf('%s (%s)', config('app.name'), config('app.env'))],
-            ['name' => 'enable-duplicate-filtering', 'contents' => 'true'],
+        $formData = [
+            'deployment-name' => $name,
+            'deployment-source' => sprintf('%s (%s)', config('app.name'), config('app.env')),
+            'deploy-changed-only' => 'true',
+            'enable-duplicate-filtering' => 'true'
         ];
 
         if (config('services.camunda.tenant_id')) {
-            $multipart[] = [
-                'name' => 'tenant-id',
-                'contents' => config('services.camunda.tenant_id'),
-            ];
+            $formData['tenant-id'] = config('services.camunda.tenant_id');
         }
 
-        $request = self::make()->withOptions(['multipart' => $multipart]);
+        $request = self::make();
         foreach ((array) $bpmnFiles as $bpmn) {
             $filename = pathinfo($bpmn)['basename'];
             $request->attach($filename, file_get_contents($bpmn), $filename);
         }
 
-        $response = $request->post('deployment/create');
+        $response = $request->post('deployment/create', $formData);
 
         if ($response->status() === 400) {
             throw new ParseException($response->json('message'));
