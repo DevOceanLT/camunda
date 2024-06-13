@@ -20,6 +20,16 @@ class ProcessInstanceClient extends CamundaClient
         return $instances;
     }
 
+    public static function post(array $parameters = []): array
+    {
+        $instances = [];
+        foreach (self::make()->post('process-instance', $parameters)->json() as $res) {
+            $instances[] = new ProcessInstance($res);
+        }
+
+        return $instances;
+    }
+
     public static function find(string $id): ProcessInstance
     {
         $response = self::make()->get("process-instance/$id");
